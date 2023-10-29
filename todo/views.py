@@ -3,8 +3,8 @@ from .models import *
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import login,logout,authenticate
-# from django.views.decorators.csrf import csrf_exempt
 # from django.http import HttpResponse
+# from django.views.decorators.csrf import csrf_exempt
 def home(request,n):
     if request.user.is_authenticated:    
         if request.method=='POST':
@@ -18,7 +18,7 @@ def home(request,n):
             s=request.GET.get('search')  
             qq=todos.objects.filter(user=n)
             r=qq.filter(title__icontains=s)
-            contex={"search":r}
+            contex={"todos":r}
             return render(request,'home.html',contex)           
         return render(request,'home.html',context)
     else:
@@ -92,7 +92,7 @@ def logout_page(request):
 
 
 # @csrf_exempt
-# def check(request):
+# def check(requesdvvat):
 #     if request.is_ajax():
 #         message = "Yes, AJAX!"
 #     else:
