@@ -16,6 +16,7 @@
     <form class="col-6 card p-3 shadow-lg m-auto" method="post">
         {% csrf_token %}
         <h3 class="text-center mt-2">Update todos</h3>
+
         <div class="form-group">
           <label for="exampleInputEmail1">Title</label>
           <input type="text" name="title" value="{{title}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

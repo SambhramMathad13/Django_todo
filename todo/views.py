@@ -60,6 +60,7 @@ def login_page(request):
 
         return render(request,'login.html')      
 
+
 def signin_page(request):
     if request.user.is_authenticated:
         return redirect(f'/home/{request.user}')

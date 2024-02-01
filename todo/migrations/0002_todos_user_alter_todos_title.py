@@ -9,6 +9,7 @@ class Migration(migrations.Migration):
         ('todo', '0001_initial'),
     ]
 
+
     operations = [
         migrations.AddField(
             model_name='todos',

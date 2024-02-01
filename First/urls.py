@@ -27,5 +27,4 @@ urlpatterns = [
     path('login/',login_page,name="login"),
     path('',signin_page,name="signin"),
     path('logout/',logout_page,name="logout"),
-    # path('check/',check,name="check"),
 ]
