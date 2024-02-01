@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from todo.views import *
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,4 @@ urlpatterns = [
     path('',signin_page,name="signin"),
     path('logout/',logout_page,name="logout"),
     # path('check/',check,name="check"),
-
 ]
